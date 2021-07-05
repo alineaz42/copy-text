@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyToClipboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <a href="#">
+                    <img src="./spencer-davis-cFQAfqgMa9I-unsplash.jpg" alt="girl image">
+                </a>
+            </div>
+            <div class="card-des">
+                <div class="para">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, a. Obcaecati ab corporis libero totam, sint sunt repellendus distinctio aperiam neque corrupti possimus dolores deserunt, hic aut reprehenderit minus asperiores?</p>
+                </div>
+                <div class="btn">
+                    <a href="#" id="copy">Copy</a>
+                    <input id="input" type="text" value="+0123-456-789-123" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const input=document.querySelector('#input')
+        const btn = document.querySelector("#copy")
+
+        btn.addEventListener("click",()=>{
+            input.select()
+            document.execCommand("copy")
+            alert(`The copy number is copied`)
+        })
+    </script>
+</body>
+</html>
